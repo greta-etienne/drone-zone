@@ -1,0 +1,131 @@
+#header {
+	padding-top: 50px;
+	height: 100vh;
+	background: url($image-path + 'banner.jpg') no-repeat top center;
+	@include background-size(cover);
+
+	.wrapper {
+		font-size: 0;
+	}
+
+	@mixin header() {
+		display: inline-block;
+		vertical-align: middle;
+		@include fontSize(18px);
+	}
+
+	.menu-header {
+		@include header;
+		width: 61%;
+
+		li {
+			display: inline-block;
+			margin-right: 4%;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		a {
+			font-family: $menu-font;
+			color: $menu-color;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 1px;
+				margin-top: 6px;
+				background: $menu-color;
+				@include transition(width .5s cubic-bezier(0.86, 0, 0.07, 1));
+			}
+
+			&:hover,
+			&:focus,
+			&.active {
+				&:after {
+					width: 100%;
+				}
+			}
+
+			&.contact-menu {
+				padding: 6px 15px;
+				@include border-radius(25px);
+				border: 1px solid transparentize($menu-color, .69);
+				
+				&:after {
+					display: none;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: #fff;
+					color: $default-color;
+				}
+			}
+		}
+	}
+
+	.logo-header {
+		@include header;
+		width: 18%;
+		margin-right: 21%;
+	}
+}
+
+#banner.wrapper {
+	position: relative;
+	max-width: 580px;
+	@include fontSize(18px);
+	text-align: center;
+	top: 50%;
+	@include transform(translate(0, -50%));
+
+	h1 {
+		margin-bottom: 20px;
+		font-family: $title-font;
+		@include fontSize(48px);
+		color: $menu-color;
+	}
+
+	p {
+		margin-bottom: 60px;
+		line-height: 30px;
+		color: transparentize($menu-color, .70);
+	}
+
+	.button-banner {
+		a {
+			display: inline-block;
+			font-family: $menu-font;
+			@include border-radius(30px);
+			padding: 15px 60px;
+			border: 1px solid transparentize($menu-color, .70);
+			color: $menu-color;
+
+			i {
+				margin-right: 20px;
+			}
+
+			&:first-child {
+				margin-right: 20px;
+				background-color: $menu-color;
+				color: #d32721;
+				border-color: $menu-color;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: $menu-color;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $menu-color;
+				color: #d32721;
+			}
+		}
+	}
+}

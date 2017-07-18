@@ -1,0 +1,22 @@
+@import 'compass';
+@import 'compass/reset';
+
+// Variables
+$default-color: 	#5e6372;
+$title-color: 		#ca0034;
+$menu-color: 		#fff;
+$button-color: 		#4964a9;
+$background-color: 	#f6f6f6;
+$footer-color: 		#a7acbc;
+
+$default-font: 		'ProximaNova-Regular', sans-serif;
+$title-font: 		'ProximaNova-Bold', sans-serif;
+$menu-font: 		'ProximaNovaT-Thin', sans-serif;
+
+$image-path:		'../images/';
+
+// Imports
+@import 'mixins';
+@import 'font';
+@import 'default';
+@import 'header';

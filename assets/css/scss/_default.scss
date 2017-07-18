@@ -1,0 +1,21 @@
+* {
+	@include box-sizing('border-box');
+}
+
+body {
+	color: $default-color;
+	@include fontSize(18px);
+	font-family: $default-font;
+	background-color: $menu-color;
+}
+
+.wrapper {
+	max-width: 100%;
+	margin: 0 auto;
+	width: 982px;
+}
+
+a {
+	text-decoration: none;
+	@include transition(all .3s ease);
+}
