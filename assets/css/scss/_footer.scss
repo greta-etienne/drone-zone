@@ -1,0 +1,75 @@
+#footer {
+	text-align: center;
+	
+	#newsletter-footer {
+		padding: 160px 0;
+		background: url($image-path + 'newsletter.jpg') top center no-repeat;
+		@include background-size(cover);
+
+		p {
+			margin-bottom: 48px;
+			@include fontSize(48px);
+			font-family: $title-font;
+			color: $menu-color;
+		}
+			
+		form {
+			position: relative;
+			width: 400px;
+			max-width: 100%;
+			margin: 0 auto;
+
+			label {
+				display: none;
+			}
+
+			input,
+			button {
+				@include border-radius(50px);
+				border: 1px solid rgba($menu-color, .5);
+				outline: none;
+			}
+
+			input[type="email"] {
+				width: 100%;
+				padding: 17px 155px 17px 31px;
+				color: $menu-color;
+				background-color: rgba($menu-color, .3);
+
+				&:focus {
+					border-color: $menu-color;
+				}
+			}
+
+			.submit {
+				position: absolute;
+				top: 0;
+				right: 0;
+
+				button {
+					background-color: $menu-color;
+					border-color: $menu-color;
+					padding: 17px 30px;
+					color: #d32721;
+					cursor: pointer;
+
+					&:before {
+						content: "\f1d8";
+						display: inline-block;
+						margin-right: 15px;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+					}
+
+					&:hover,
+					&:focus {
+						background-color: transparent;
+						color: rgba($menu-color, .5);
+						border-color: rgba($menu-color, .5);
+					}
+				}
+			}
+		}
+	}
+}

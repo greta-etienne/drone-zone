@@ -19,3 +19,19 @@ a {
 	text-decoration: none;
 	@include transition(all .3s ease);
 }
+
+input,
+select,
+textarea,
+button {
+	color: $default-color;
+	@include fontSize(18px);
+	font-family: $default-font;
+	@include transition(all .3s ease);
+}
+
+@include placeholder {
+	color: rgba($menu-color, .5);
+	@include fontSize(18px);
+	font-family: $menu-font;
+}
