@@ -30,24 +30,7 @@
 		a {
 			font-family: $menu-font;
 			color: $menu-color;
-
-			&:after {
-				content: '';
-				display: block;
-				width: 0;
-				height: 1px;
-				margin-top: 6px;
-				background: $menu-color;
-				@include transition(width .5s cubic-bezier(0.86, 0, 0.07, 1));
-			}
-
-			&:hover,
-			&:focus,
-			&.active {
-				&:after {
-					width: 100%;
-				}
-			}
+			@include linkHover(6px, $menu-color);
 
 			&.contact-menu {
 				padding: 6px 15px;

@@ -10,8 +10,31 @@
 }
 
 @mixin placeholder {
-	::-webkit-input-placeholder {@content}
-	:-moz-placeholder           {@content}
-	::-moz-placeholder          {@content}
-	:-ms-input-placeholder      {@content}  
+	::-webkit-input-placeholder {@content};
+	:-moz-placeholder           {@content};
+	::-moz-placeholder          {@content};
+	:-ms-input-placeholder      {@content};  
+}
+
+
+@mixin linkHover($margin: 2px, $color: $title-color) {
+	display: inline-block;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		margin-top: $margin;
+		background: $color;
+		@include transition(width .5s cubic-bezier(0.86, 0, 0.07, 1));
+	}
+
+	&:hover,
+	&:focus,
+	&.active {
+		&:after {
+			width: 100%;
+		}
+	}
 }
