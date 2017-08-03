@@ -1,0 +1,117 @@
+#primary-content {
+	.content {
+		padding: 120px 0;
+
+		.title-content {
+			margin-bottom: 30px;
+			@include fontSize(48px);
+			font-family: $extra-font;
+			color: $title-color;
+		}
+
+		p {
+			line-height: 36px;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 15px 55px;
+			margin-top: 65px;
+			border: 1px solid $button-color;
+			font-family: $menu-font;
+			color: #fff;
+			@include border-radius(50px);
+			background-color: $button-color;
+			@include background-image(linear-gradient(left, rgba(#fff, 0) 0%, rgba(#fff, .16) 100%));
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				color: $button-color;
+			}
+		}
+
+		#list-content {
+			margin-top: 10px;
+			font-size: 0;
+
+			li {
+				display: inline-block;
+				vertical-align: top;
+				width: 48%;
+				margin: 50px 4% 0 0;
+				@include fontSize(18px);
+
+				&:nth-child(2n) {
+					margin-right: 0;
+				}
+
+				span {
+					float: left;
+					width: 20%;
+					margin-right: 5%;
+					display: inline-block;
+					width: 50px;
+					height: 50px;
+					@include border-radius(50px);
+					color: #3f4e76;
+					@include fontSize(24px);
+					border: 2px solid #c7cde0;
+					line-height: 50px;
+					text-align: center;
+				}
+
+				p {
+					float: left;
+					width: 75%;
+					line-height: 24px;
+					@include fontSize(14px);
+					color: #a7acbc;
+				}
+			}
+		}
+	}
+	.background-content {
+		background: url($image-path + 'content-home.jpg') top center no-repeat;
+		@include background-size(cover);
+		padding: 130px 0;
+		
+		.wrapper {
+			max-width: 690px;
+			padding: 70px 65px;
+			background-color: $menu-color;
+			@include box-shadow(0 0 16px 0 rgba(0,0,0, .2));
+		}
+	}
+	
+	#service-content {
+		background-color: $background-color;
+		text-align: center;
+
+		.title-service {
+			margin: 18px 0 30px;
+			@include fontSize(30px);
+			color: $title-color;
+			font-family: $title-font;
+		}
+
+		p {
+			line-height: 30px;
+		}
+
+		ul {
+			font-size: 0;
+
+			li {
+				display: inline-block;
+				width: 21%;
+				margin-right: 5%;
+				@include fontSize(18px);
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
