@@ -6,11 +6,20 @@
 		background: url($image-path + 'newsletter.jpg') top center no-repeat;
 		@include background-size(cover);
 
+		@media (max-width: 588px) {
+			padding: 60px 0;
+		}
+
 		p {
 			margin-bottom: 48px;
 			@include fontSize(48px);
 			font-family: $title-font;
 			color: $menu-color;
+
+			@media (max-width: 588px) {
+				margin-bottom: 30px;
+				@include fontSize(35px);
+			}
 		}
 			
 		form {
@@ -39,12 +48,21 @@
 				&:focus {
 					border-color: $menu-color;
 				}
+
+				@media (max-width: 350px) {
+					padding-right: 31px;
+				}
 			}
 
 			.submit {
 				position: absolute;
 				top: 0;
 				right: 0;
+
+				@media (max-width: 350px) {
+					position: static;
+					margin-top: 20px;
+				}
 
 				button {
 					background-color: $menu-color;
@@ -78,8 +96,16 @@
 		font-family: $menu-font;
 		color: $default-color;
 
+		@media (max-width: $large-media) {
+			padding: 20px 2%;
+		}
+
 		p {
 			margin-bottom: 20px;
+
+			@media (max-width: $large-media) {
+				margin-bottom: 10px;
+			}
 
 			&:last-child {
 				margin-bottom: 0;
